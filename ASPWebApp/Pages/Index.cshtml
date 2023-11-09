@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <form method="post">
+        <h1 class="display-4"><b>Number Triangle</b></h1>
+        <label for="num">Input any number:</label>
+        <input type="text" id="Num" name="Num" value="@Model.Num"/>
+        <button type="submit" id="btn">Submit</button>
+    </form>
+<br>
+
+    <ul>
+        @for (int i = 0; i < @Model.Num; i++)
+        {
+            Model.Count++;
+            @for(int j=0;j<@Model.Count;j++){
+            <b>*</b>
+            }
+            <br>
+        }
+    </ul>
+
+</div>
